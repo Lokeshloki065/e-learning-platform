@@ -1,0 +1,1 @@
+console.log('E-learning platform script loaded');

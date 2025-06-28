@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnPro | E-Learning Platform</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background: #0e4b8c;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      padding: 3rem 2rem;
+      background: #2c69ab;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .hero-content p {
+      color: white;
+    }
+
+    .btn {
+      background: #0e4b8c;
+      color: white;
+      padding: 0.11rem 2.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .feature-box {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .course-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .btn-sm {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #0e4b8c;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .testimonials {
+      background-color: #f1f8ff;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .testimonial {
+      max-width: 500px;
+      margin: auto;
+      font-style: italic;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #0e4b8c, #66c2ff);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .cta-section .btn {
+      background-color: #fff;
+      color: #0e4b8c;
+    }
+
+    .newsletter {
+      background-color: #fafafa;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .newsletter input {
+      padding: 0.8rem;
+      width: 60%;
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 0.5rem;
+    }
+
+    .newsletter button {
+      padding: 0.8rem 1.5rem;
+      background-color: #0e4b8c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer {
+      background: #0e4b8c;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .socials a {
+      color: white;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    @media(max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .newsletter input,
+      .newsletter button {
+        width: 100%;
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">📘 LearnPro</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html" class="login-btn">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Empower Your Learning Journey</h1>
+      <p>Explore top-quality courses from expert instructors and track your progress with ease.</p>
+      <a href="courses.html" class="btn">Browse Courses</a>
+    </div>
+    <div class="hero-image">
+      
+      
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Why LearnPro?</h2>
+    <div class="features-grid">
+      <div class="feature-box">
+        <h3>🎓 Expert Mentors</h3>
+        <p>Learn from industry leaders with real-world experience.</p>
+      </div>
+      <div class="feature-box">
+        <h3>📊 Track Progress</h3>
+        <p>Monitor your learning journey with our intuitive dashboard.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🎥 Video Lessons</h3>
+        <p>HD video courses with transcripts and downloadable content.</p>
+      </div>
+      <div class="feature-box">
+        <h3>📱 Learn Anytime</h3>
+        <p>Access courses on any device, whenever and wherever you want.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🏆 Certifications</h3>
+        <p>Receive accredited certificates after course completion.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🤝 Peer Community</h3>
+        <p>Join discussion forums and interact with fellow learners.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="popular-courses">
+    <h2>Popular Courses</h2>
+    <div class="courses-grid">
+      <div class="course-card"><img src="web.webp" alt="Web Dev Bootcamp">
+        <h3>Web Development Bootcamp</h3>
+        <p>Master HTML, CSS, JS & React</p><a href="course-detail.html" class="btn-sm">Start Learning</a>
+      </div>
+      <div class="course-card"><img src="ui.jpg" alt="UI/UX Design">
+        <h3>UI/UX Design Fundamentals</h3>
+        <p>Design beautiful and user-friendly interfaces</p><a href="course-detail.html" class="btn-sm">Start Learning</a>
+      </div>
+      <div class="course-card"><img src="python.png" alt="Python Data Science">
+        <h3>Python for Data Science</h3>
+        <p>Analyze data and build ML models</p><a href="course-detail.html" class="btn-sm">Start Learning</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Learners Say</h2>
+    <p class="testimonial">"LearnPro helped me land my first developer job! Their dashboard is super user-friendly and
+      the mentors are amazing!" <br> — <strong>Lokesh M.</strong></p>
+  </section>
+
+  <section class="cta-section">
+    <h2>Start Your Learning Journey Today</h2>
+    <a href="register.html" class="btn">Create an Account</a>
+  </section>
+
+  <section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+  </section>
+
+  <section class="contact" style="text-align:center; padding:2rem; background:#f9f9f9;">
+    <h2>Need Help?</h2>
+    <p>Email us at <a href="mailto:imlokesh152005@gmail.com">imlokesh152005@gmail.com.com</a></p>
+    <p>Or call us: +91-9655865777</p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 LearnPro. All rights reserved.</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+</body>
+
+</html>

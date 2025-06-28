@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | LearnPro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      min-height: 100vh;
+    }
+
+    .header {
+      background: #0e4b8c;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 1rem;
+    }
+
+    .login-form {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-radius: 16px;
+      padding: 40px 30px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      color: #fff;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-form h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 12px 0;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    .login-form input::placeholder {
+      color: #ddd;
+    }
+
+    .login-form input:focus {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .login-form button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      background-color: #ffffff;
+      color: #2a5298;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-form button:hover {
+      background-color: #dbe7ff;
+    }
+
+    .login-form p {
+      text-align: center;
+      margin: 12px 0;
+    }
+
+    .login-form a {
+      color: #ffd;
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 500px) {
+      .login-form {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+
+  <!-- Firebase Login Script -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAhpkLW4FgVg7q8qvtYM1vmFNvvN_8jKNY",
+      authDomain: "learnpro-1a052.firebaseapp.com",
+      projectId: "learnpro-1a052",
+      storageBucket: "learnpro-1a052.appspot.com",
+      messagingSenderId: "423562397732",
+      appId: "1:423562397732:web:480e95b86109c4b45d70b1",
+      measurementId: "G-J7CCDJLWCJ"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+
+    window.login = async function () {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        window.location.href = "dashboard.html";
+      } catch (err) {
+        alert("❌ " + err.message);
+      }
+    };
+
+    window.googleLogin = async function () {
+      try {
+        await signInWithPopup(auth, provider);
+        window.location.href = "index.html";
+      } catch (err) {
+        alert("❌ " + err.message);
+      }
+    };
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">📘 LearnPro</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="login-form">
+      <h2>Login to LearnPro</h2>
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button onclick="login()">Login</button>
+      <p>or</p>
+      <button onclick="googleLogin()">Login with Google</button>
+      <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </section>
+  </main>
+</body>
+</html>

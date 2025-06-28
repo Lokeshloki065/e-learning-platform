@@ -1,0 +1,104 @@
+
+
+ body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background: #0e4b8c;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      padding: 3rem 2rem;
+      background: #2c69ab;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .hero-content p {
+      color: white;
+    }
+
+.btn {
+  background: white;
+  color: #0056d2;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.features {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.feature-box {
+  background: #eef3ff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.popular-courses {
+  padding: 2rem;
+}
+.courses-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.course-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 250px;
+}
+.course-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.btn-sm {
+  background: #0056d2;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+}

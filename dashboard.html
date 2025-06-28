@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | LearnPro</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; margin: 0; background: #f1f9ff; }
+    .dashboard { max-width: 1000px; margin: auto; padding: 2rem; }
+    h1 { color: #0e4b8c; }
+    .course-progress {
+      background: #fff; padding: 1.5rem; border-radius: 10px;
+      margin-bottom: 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .progress-bar {
+      background: #d9e6f5; border-radius: 20px; overflow: hidden;
+      height: 20px; margin-top: 0.5rem;
+    }
+    .progress {
+      background: #0e4b8c; height: 100%; text-align: right;
+      color: white; padding-right: 10px; line-height: 20px;
+    }
+     .header {
+      background: #0e4b8c;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<header class="header">
+    <div class="logo">📘 LearnPro</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html" class="login-btn">Login</a>
+    </nav>
+  </header>
+<body>
+  <div class="dashboard">
+    <h1>📊 Your Learning Dashboard</h1>
+
+    <div class="course-progress">
+      <h3>Full Stack Development</h3>
+      <div class="progress-bar">
+        <div class="progress" style="width: 60%;">60%</div>
+      </div>
+    </div>
+
+    <div class="course-progress">
+      <h3>UI/UX Design</h3>
+      <div class="progress-bar">
+        <div class="progress" style="width: 30%;">30%</div>
+      </div>
+    </div>
+
+    <div class="course-progress">
+      <h3>Python for Data Science</h3>
+      <div class="progress-bar">
+        <div class="progress" style="width: 90%;">90%</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
